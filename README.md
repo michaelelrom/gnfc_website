@@ -5,21 +5,26 @@ Static HTML/CSS website for Good Neighbor Fence Company (GNFC), a commercial fen
 ## Project Structure
 
 ```
-/          # Website files (upload to hosting)
-├── index.html         # Homepage
-├── temporary-fencing.html
-├── permanent-fencing.html
-├── gates-access.html
-├── about.html
-├── get-in-touch.html  # Contact form
-├── send-quote.php     # PHP form handler (sends email)
-├── css/style.css      # Stylesheet
-└── assets/            # Images (logos, product photos, industry photos)
+john/
+├── .gitignore
+├── README.md              # This file
+├── extract.py             # Python scraper (pulls assets from Macaly preview)
+└── root/                  # Website files → upload to GoDaddy public_html
+    ├── index.html         # Homepage
+    ├── temporary-fencing.html
+    ├── permanent-fencing.html
+    ├── gates-access.html
+    ├── about.html
+    ├── get-in-touch.html  # Contact form
+    ├── send-quote.php     # PHP form handler (sends email)
+    ├── css/
+    │   └── style.css
+    └── assets/            # Images (logos, product photos, industry photos)
 ```
 
 ## Setup (Python Scraper)
 
-The `extract.py` script was used to scrape images and content from preview site. You only need this if re-scraping.
+The `extract.py` script was used to scrape images from the Macaly preview site. Only needed if re-scraping.
 
 ### 1. Create virtual environment
 
@@ -53,7 +58,7 @@ deactivate
 
 ## Deployment (GoDaddy)
 
-1. Upload the **contents** of `gnfc_website/` to your GoDaddy `public_html` directory
+1. Upload the **contents** of `root/` to your GoDaddy `public_html` directory
 2. Edit `send-quote.php` line 6 — set `$to_email` to the email that should receive quote requests
 3. The PHP `mail()` function works out of the box on GoDaddy shared hosting
 
