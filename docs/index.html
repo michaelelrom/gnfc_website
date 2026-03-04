@@ -89,7 +89,7 @@
     <!-- Our Expertise -->
     <section class="section section-navy">
         <div class="max-w-7xl">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <div class="section-label">
                     <div class="line"></div>
                     <span>What We Do</span>
@@ -99,21 +99,21 @@
                 <p>20 years providing prompt and professional service with organized, efficient, and knowledgeable expertise in everything fence.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card reveal reveal-delay-1">
                     <div class="icon">🏗️</div>
                     <div class="divider"></div>
                     <h3>Permanent Fencing</h3>
                     <p>Chain link, PVC, wood, vinyl-coated, ornamental, pool fencing, bollards, and more. Built to last for industrial, government, and commercial properties across Florida.</p>
                     <a href="permanent-fencing.html" class="learn-more">Learn More →</a>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal reveal-delay-2">
                     <div class="icon">🚧</div>
                     <div class="divider"></div>
                     <h3>Temporary Fencing</h3>
                     <p>Pounded post chain link, modular panels on stands, windscreen, pedestrian barricades, and gates. For construction sites and special events — short or long-term rental.</p>
                     <a href="temporary-fencing.html" class="learn-more">Learn More →</a>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal reveal-delay-3">
                     <div class="icon">🔐</div>
                     <div class="divider"></div>
                     <h3>Gates &amp; Access Control</h3>
@@ -127,7 +127,7 @@
     <!-- Industries We Serve -->
     <section class="section section-surface">
         <div class="max-w-7xl">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <div class="section-label">
                     <div class="line"></div>
                     <span>Industries We Serve</span>
@@ -202,7 +202,7 @@
 
     <!-- About Section -->
     <section class="section section-white">
-        <div class="split-section">
+        <div class="split-section reveal">
             <div class="split-image">
                 <img src="assets/Chain-Link.jpg" alt="Professional fence installation by Good Neighbor Fence Company" loading="lazy">
                 <div class="overlay"></div>
@@ -241,7 +241,7 @@
     <!-- Testimonials -->
     <section class="section section-navy">
         <div class="max-w-7xl">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <div class="section-label">
                     <div class="line"></div>
                     <span>Client Reviews</span>
@@ -292,7 +292,7 @@
     <!-- CTA Banner -->
     <section class="cta-banner">
         <div class="pattern"></div>
-        <div class="content">
+        <div class="content reveal">
             <h2>Ready to Get Started?</h2>
             <p>Contact us today for a free, no-obligation quote. Our team is ready to help with your fencing project — big or small, anywhere in Florida.</p>
             <a href="get-in-touch.html" class="btn btn-gold">Get Your Free Quote →</a>
@@ -328,21 +328,40 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; 2024 Good Neighbor Fence Company. All rights reserved.</span>
+                <span>&copy; 2026 Good Neighbor Fence Company. All rights reserved.</span>
                 <span>Serving All of Florida</span>
             </div>
         </div>
     </footer>
 
     <script>
-        // Close mobile menu when clicking a link
+        // FOUC
+        document.documentElement.classList.add("loaded");
+
+        // Mobile nav
         document.querySelectorAll('#main-nav a').forEach(function(link) {
             link.addEventListener('click', function() {
                 document.getElementById('main-nav').classList.remove('open');
             });
         });
-    </script>
 
-<script>document.documentElement.classList.add("loaded");</script>
+        // Header scroll effect
+        var header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Scroll reveal
+        var reveals = document.querySelectorAll('.reveal');
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(function(el) { observer.observe(el); });
+    </script>
 </body>
 </html>

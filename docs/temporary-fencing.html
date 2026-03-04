@@ -46,7 +46,7 @@
 
     <!-- Overview -->
     <section class="section section-white">
-        <div class="split-section">
+        <div class="split-section reveal">
             <div class="split-image">
                 <img src="assets/Panel-with-Stands-1.jpg" alt="Temporary Panel Fencing">
             </div>
@@ -71,7 +71,7 @@
     <!-- Products -->
     <section class="section section-surface">
         <div class="max-w-7xl">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <div class="section-label">
                     <div class="line"></div>
                     <span>Our Products</span>
@@ -108,7 +108,7 @@
     <!-- Why Choose Us -->
     <section class="section section-navy">
         <div class="max-w-7xl">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <div class="section-label">
                     <div class="line"></div>
                     <span>Why GNFC</span>
@@ -144,7 +144,7 @@
     <!-- CTA Banner -->
     <section class="cta-banner">
         <div class="pattern"></div>
-        <div class="content">
+        <div class="content reveal">
             <h2>Need Temporary Fencing?</h2>
             <p>Contact us today for a free quote. We deliver, install, and remove — anywhere in Florida.</p>
             <a href="get-in-touch.html" class="btn btn-gold">Get Your Free Quote →</a>
@@ -180,20 +180,24 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; 2024 Good Neighbor Fence Company. All rights reserved.</span>
+                <span>&copy; 2026 Good Neighbor Fence Company. All rights reserved.</span>
                 <span>Serving All of Florida</span>
             </div>
         </div>
     </footer>
 
     <script>
+        document.documentElement.classList.add("loaded");
         document.querySelectorAll('#main-nav a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.getElementById('main-nav').classList.remove('open');
-            });
+            link.addEventListener('click', function() { document.getElementById('main-nav').classList.remove('open'); });
         });
+        var header = document.querySelector('header');
+        window.addEventListener('scroll', function() { header.classList.toggle('scrolled', window.scrollY > 50); });
+        var reveals = document.querySelectorAll('.reveal');
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+        }, { threshold: 0.1 });
+        reveals.forEach(function(el) { observer.observe(el); });
     </script>
-
-<script>document.documentElement.classList.add("loaded");</script>
 </body>
 </html>
