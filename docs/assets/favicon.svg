@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Cast iron ornamental fence -->
+  <!-- Spear-top pickets -->
+  <g fill="#1a1a1a">
+    <!-- Picket 1 -->
+    <rect x="3" y="8" width="3" height="22" rx="0.5"/>
+    <polygon points="4.5,3 2,8 7,8"/>
+    <!-- Picket 2 -->
+    <rect x="10" y="8" width="3" height="22" rx="0.5"/>
+    <polygon points="11.5,3 9,8 14,8"/>
+    <!-- Picket 3 -->
+    <rect x="17" y="8" width="3" height="22" rx="0.5"/>
+    <polygon points="18.5,3 16,8 21,8"/>
+    <!-- Picket 4 -->
+    <rect x="24" y="8" width="3" height="22" rx="0.5"/>
+    <polygon points="25.5,3 23,8 28,8"/>
+  </g>
+  <!-- Horizontal rails -->
+  <rect x="1" y="12" width="28" height="2.5" rx="0.5" fill="#2a2a2a"/>
+  <rect x="1" y="22" width="28" height="2.5" rx="0.5" fill="#2a2a2a"/>
+  <!-- Decorative finial balls -->
+  <circle cx="4.5" cy="2.5" r="1.5" fill="#1a1a1a"/>
+  <circle cx="11.5" cy="2.5" r="1.5" fill="#1a1a1a"/>
+  <circle cx="18.5" cy="2.5" r="1.5" fill="#1a1a1a"/>
+  <circle cx="25.5" cy="2.5" r="1.5" fill="#1a1a1a"/>
+</svg>
