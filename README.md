@@ -16,12 +16,12 @@ gnfc_website/          # Website files (upload to hosting)
 ├── css/style.css      # Stylesheet
 └── assets/            # Images (logos, product photos, industry photos)
 
-extract.py             # Python scraper script (used to pull assets from Macaly)
+extract.py             # Python scraper script (used to pull assets)
 ```
 
 ## Setup (Python Scraper)
 
-The `extract.py` script was used to scrape images and content from the Macaly preview site. You only need this if re-scraping.
+The `extract.py` script was used to scrape images and content from preview site. You only need this if re-scraping.
 
 ### 1. Create virtual environment
 
