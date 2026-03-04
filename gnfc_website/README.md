@@ -5,7 +5,7 @@ Static HTML/CSS website for Good Neighbor Fence Company (GNFC), a commercial fen
 ## Project Structure
 
 ```
-/          # Website files (upload to hosting)
+gnfc_website/          # Website files (upload to hosting)
 ├── index.html         # Homepage
 ├── temporary-fencing.html
 ├── permanent-fencing.html
@@ -15,6 +15,8 @@ Static HTML/CSS website for Good Neighbor Fence Company (GNFC), a commercial fen
 ├── send-quote.php     # PHP form handler (sends email)
 ├── css/style.css      # Stylesheet
 └── assets/            # Images (logos, product photos, industry photos)
+
+extract.py             # Python scraper script (used to pull assets)
 ```
 
 ## Setup (Python Scraper)
