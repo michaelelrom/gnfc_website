@@ -983,14 +983,14 @@ nav a.cta-nav:hover {
 .contact-info h2 {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 32px;
-    color: var(--gnfc-navy);
+    color: white;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
 .contact-info > p {
     font-size: 16px;
-    color: var(--gnfc-text-muted);
+    color: rgba(255,255,255,0.7);
     margin-bottom: 30px;
     line-height: 1.7;
 }
@@ -1011,15 +1011,24 @@ nav a.cta-nav:hover {
 .contact-detail h4 {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 16px;
-    color: var(--gnfc-navy);
+    color: var(--gnfc-gold);
     text-transform: uppercase;
     margin-bottom: 3px;
 }
 
 .contact-detail p {
     font-size: 14px;
-    color: var(--gnfc-text-muted);
+    color: rgba(255,255,255,0.7);
     margin-bottom: 0;
+}
+
+.contact-detail p a {
+    color: rgba(255,255,255,0.7);
+    transition: color 0.2s;
+}
+
+.contact-detail p a:hover {
+    color: var(--gnfc-gold);
 }
 
 .contact-form {
