@@ -248,6 +248,10 @@ footer .inner{max-width:1280px;margin:0 auto;padding:0 24px}
 .footer-col a:hover{color:var(--gn-accent)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:25px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,.4)}
 
+/* MAP */
+.map-container{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-lg)}
+.map-container iframe{display:block;width:100%;height:450px}
+
 /* RESPONSIVE */
 @media(max-width:1024px){
     .industries-grid{grid-template-columns:repeat(3,1fr)}
