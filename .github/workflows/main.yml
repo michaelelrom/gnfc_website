@@ -1,21 +1,24 @@
-name: Deploy Website
+name: Deploy Docs to GoDaddy
 on:
   push:
     branches:
-      - main  # Only trigger on pushes to main branch
+      - main
 
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: 🚀 Deploy Docs Directory Only
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      - name: 📂 Sync files
+      - name: 📂 Sync Docs Folder
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/ # Adjust this to your specific folder
+          # The local folder to sync
+          local-dir: ./docs/
+          # The destination on GoDaddy (usually public_html or a subfolder)
+          server-dir: /public_html/
