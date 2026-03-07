@@ -3,7 +3,8 @@
 // Good Neighbor Fence Company - Quote Form Handler
 // ============================================
 // Set the email address where you want to receive quotes
-$to_email = "info@fence4u.biz";
+// $to_email = "info@fence4u.biz";
+$to_email = "mikeelrom@gmail.com";
 
 // Optional: Add a CC
 // $cc_email = "sales@fence4u.biz";
